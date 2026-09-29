@@ -1,5 +1,0 @@
-# Run latexmk here to build the editable handout separately from its source PDF.
-$pdf_mode = 1;
-$out_dir = '../output/pdf/mug-rack';
-$aux_dir = '../tmp/pdfs/mug-rack/build';
-@default_files = ('MugRack.tex');
