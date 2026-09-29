@@ -1,0 +1,61 @@
+% O1 Team Contract rubric
+\documentclass[11pt]{article}
+\usepackage{mae2250-handout}
+
+% --- Rubric metadata ---
+\renewcommand{\HandoutType}{Rubric}
+\renewcommand{\HandoutNumber}{3}
+\renewcommand{\HandoutTitle}{Parameter-Driven Design}
+% \renewcommand{\DueDate}{Midnight, your Lab Section day, week of Feb. \nth{9}, and midnight two days after (report)}
+% \renewcommand{\TeamType}{Individual}
+\usepackage[skip=10pt plus1pt, indent=0pt]{parskip}
+
+
+\begin{document}
+\MakeHandoutHeader
+
+% \section*{Student-facing Rubric}
+
+
+\subsection*{Student-facing rubric}
+\PointsTableAuto{
+  \PointsRow{All CAD sketches, bodies, and functional parameters have a meaningful name}{3}
+  \PointsRow{All CAD sketches are fully constrained}{1}
+  \PointsRow{All parts are assigned a material, and non-driven dimensions are reasonable for that material}{2}
+  \PointsRow{The drawn sketch/equations clearly convey design intent and matches the CAD history}{4}
+  \PointsRow{Cup would fit in a standard car cup-holder}{1}
+  \PointsRow{Cup capacity can be changed with a single parameter without breaking any part}{4}
+}
+\subsection*{Detailed rubric}
+\textbf{Sketches, bodies, and functional parameters have a meaningful name: 3}
+\\
+\Dock one point for each category of $\{\text{sketches, bodies}\}$ where something is unnamed.
+For the parameters, all \emph{driven} and \emph{driving} parameters should have a name (as illustrated in their illustration). If not, \dock 1 point. (Open \texttt{Change parameters} from the \texttt{MODIFY} dropdown menu.)
+\par
+\textbf{All CAD sketches are fully constrained: 1}
+\\
+Self explanatory.
+\par
+\textbf{All parts are assigned a material, with reasonable dimensions: 2}
+\\
+\Award 1 point for each. When thinking about reasonable dimensions, consider the fabrication process.
+\par
+\textbf{The drawn sketch/equations clearly convey design intent: 4}
+\\
+\Award 1 points if the drawn sketch clearly shows which parameters will be driving/driven.\\
+\Award 2 point if the sketch and the CAD history match. For example, if the bottom and top of the cup are defined by \texttt{circle sketches} on \texttt{offset planes} and a \texttt{loft} between them, I would expect the drawn sketch to specify the diameters and distance between those planes. If instead the CAD uses an \texttt{extrude} with a \texttt{taper angle}, I would expect that angle to be illustrated in the drawn sketch.
+\par
+\textbf{Cup would fit in a standard car cup-holder: 1}
+\\
+\Award 1 point if the bottom 2 inches of the cup are less than 3 inches in diameter.
+\par
+\textbf{Cup capacity can be changed with a single parameter without breaking any part: 4}
+\Award 1 point if the cup total volume can be easily changed between 4 oz and 24 oz, and how to change this is clearly explained through the sketch or other means.
+\\
+\Award 1 points if the cap always fits correctly within this range.
+\\
+\Award 1 point if the cup would always fit the car cup holder when changed in these ranges.
+\\
+\Award 1 point if the aesthetics of the cup remain consistent / appealing when changing the volume in this range.
+\\
+\end{document}

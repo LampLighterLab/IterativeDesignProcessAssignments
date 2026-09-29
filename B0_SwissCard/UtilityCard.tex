@@ -1,0 +1,97 @@
+% handout_template.tex
+\documentclass[11pt]{article}
+\usepackage{mae2250-handout}
+\usepackage{hyperref}
+% \usepackage[colorlinks, urlcolor=blue, linkcolor=red, citecolor=green]{hyperref}
+
+% --- Handout metadata (edit per handout) ---
+\renewcommand{\HandoutType}{Assignment} % e.g., Assignment, Open Design Project
+\renewcommand{\HandoutNumber}{X} % e.g., 1, 2, ...
+\renewcommand{\HandoutTitle}{Utility Card}
+\renewcommand{\DueDate}{Mar 15 @ 11:59PM}
+\renewcommand{\TeamType}{Team} % e.g., INDIVIDUAL, DESIGN TEAM (4--6 students)
+% \renewcommand{\TotalPoints}{15}
+
+\begin{document}
+\MakeHandoutHeader
+
+% =========================
+% Edit content below
+% =========================
+
+% \Section{Logistics}
+
+% To ensure your deliverables are submitted correctly, and TAs are grading the correct version, you'll need to create a few specific folders in your fusion 2250 project.
+
+% First, you'll create a \texttt{<CoffeeGrinder>} folder in your 2250 project folder.
+% Then add two sub-folders: one called \texttt{<CoffeeGrinder\_Working>} and the other labelled \texttt{<CoffeeGrinder\_Final>}.
+% As you might expect, you'll create and edit your parts in the working folder.
+% This is your sandbox!
+% You can make as many versions, mistakes, or edits as you want here (including accidental destruction and failed repairs).
+% Your TAs won't grade or look at this folder.
+% When you are confident that your files are ready to submit, move or copy them to the “Final” folder.
+% Your TAs will only grade files in this folder - if you do not move them from Working to Final they will not be graded.
+% This is a good habit to practice not only for this class, but for organizing versions of your files as they go into “Design Freeze” in practice.
+
+\section{Problem Statement}
+
+ILOs:
+\begin{enumerate}
+    \item use team workflows in Fusion
+    \item use top-down (master-modeling) design workflow
+    \item (tentative) identify advantages and disadvantages of laser-cutting and 3D-printing for fabrication
+\end{enumerate}
+
+\subsection*{Background}
+
+You will design and fabricate a prototype of a \href{https://www.victorinox.com/en-US/Products/Swiss-Army-Knife™-and-Tools/Essentials/Swiss-Card-Classic/p/0.7100.T}{Swiss Card}, as shown in Fig.~\ref{fig:swisscard}.
+This is a credit card sized holder with a number of tools in it.
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.75\textwidth]{swiss_card_2.png}
+  \caption{The original Swiss Card by Victorinox.}
+  \label{fig:swisscard}
+\end{figure}
+In small teams, you will start with a master design, brainstorm to come up with a themed set of tools, and then each person will do the CAD for at least one tool.
+You should start with a sketch of both the individual tools, but also how they fit in the card, to divvy up the real-estate for your tool in the card.
+To be most efficient, you'll need to fine-tune down the line, once everyone's CAD is done.
+\par
+Before moving to CAD, check with your lab-section TA to approve your set of tools and initial sketch.
+You should absolutely match the tool-complexity (for CAD) with each team-mate's experience.
+\par
+\emph{Tentative:} potentially fabricate silhouettes of the tools and the card, and compare fabrication of this using 3D printing vs laser-cutting. Potentially with snap-fits for the two (or three) parts, and to learn the importance of clearances.
+% todo: insert side-by-side figure
+
+
+% Peugeot is known as \href{https://en.wikipedia.org/wiki/Peugeot}{the oldest car company} in the world, but do you know that Peugeot built coffee grinders since the 1840s? In this \href{https://www.youtube.com/watch?v=biTUPDVP57Y}{Youtube video}, you can see detailed disassembly and assembly of a vintage Peugeot coffee grinder made in the 1930s. Your goal is to redesign it with modern components that are ready to be purchased or fabricated through class resources, and verify your design with CAD. \\
+% \textit{Note: You are not required to actually build the grinder, but you could do that with minor adjustments if you were interested and you correctly adhered to the requirements below. }
+
+\subsection*{Instructions and Requirements}
+
+TBD.
+
+\section{Deliverables}
+
+\begin{enumerate}
+    \item Brainstorming outcome: theme and list of potential tools, evaluation in terms of usefulness vs. feasibility, and filtered-down version of tools.
+    \item Sketch of tools with dimensions, and how they are organized into the card.
+    \item CAD step 1: master-model of the overall CAD, with the overall silhouettes of each tool cut out.
+    \item CAD step 2: individual tools from each team-mate.
+    \item CAD step 3: assembly of complete product.
+    \item \emph{tentative:} fabricated mock-up.
+\end{enumerate}
+
+% Example points table rows:
+\PointsTableAuto{
+  \PointsRow{TBD}{25}
+%   \PointsRow{The CAD assembly has a container for coffee beans and another for ground coffee (otherwise a small cup of at least 40~mm high and in diameter should fit beneath the grinder)}{2}
+%   \PointsRow{The CAD assembly is properly constrained and assembled, and can be operated as a coffee grinder, as described in the CAD Verification \& Refine section above}{8}
+%   \PointsRow{All CAD files follow Good CAD Practices posted on Canvas}{3}
+%   \PointsRow{The sketch clearly conveys design intent}{3}
+%   \PointsRow{The sketch is consistent with the CAD assembly}{2}
+%   \PointsRow{The component list clearly records descriptions, source, and machining needed}{3}
+%   \PointsRow{The component list matches the components in the CAD assembly}{3}
+%   \PointsRow{All components, except for the conical burr set, are available from the Class Resources}{4}
+}
+
+\end{document}

@@ -1,0 +1,93 @@
+% handout_template.tex
+\documentclass[11pt]{article}
+\usepackage{mae2250-handout}
+\usepackage{hyperref}
+% \usepackage[colorlinks, urlcolor=blue, linkcolor=red, citecolor=green]{hyperref}
+
+% --- Handout metadata (edit per handout) ---
+\renewcommand{\HandoutType}{Assignment} % e.g., Assignment, Open Design Project
+\renewcommand{\HandoutNumber}{4} % e.g., 1, 2, ...
+\renewcommand{\HandoutTitle}{Coffee Grinder}
+\renewcommand{\DueDate}{Mar 15 @ 11:59PM}
+\renewcommand{\TeamType}{Individual} % e.g., INDIVIDUAL, DESIGN TEAM (4--6 students)
+% \renewcommand{\TotalPoints}{15}
+
+\begin{document}
+\MakeHandoutHeader
+
+% =========================
+% Edit content below
+% =========================
+
+\Section{Logistics}
+
+To ensure your deliverables are submitted correctly, and TAs are grading the correct version, you'll need to create a few specific folders in your fusion 2250 project.
+
+First, you'll create a \texttt{<CoffeeGrinder>} folder in your 2250 project folder.
+Then add two sub-folders: one called \texttt{<CoffeeGrinder\_Working>} and the other labelled \texttt{<CoffeeGrinder\_Final>}.
+As you might expect, you'll create and edit your parts in the working folder.
+This is your sandbox!
+You can make as many versions, mistakes, or edits as you want here (including accidental destruction and failed repairs).
+Your TAs won't grade or look at this folder.
+When you are confident that your files are ready to submit, move or copy them to the “Final” folder.
+Your TAs will only grade files in this folder - if you do not move them from Working to Final they will not be graded.
+This is a good habit to practice not only for this class, but for organizing versions of your files as they go into “Design Freeze” in practice.
+
+\section{Problem Statement}
+The purpose of this assignment is to practice component selection (on McMaster-Carr), and to iterate and adjust your design to use off-the-shelf parts.
+\subsection*{Background}
+Peugeot is known as \href{https://en.wikipedia.org/wiki/Peugeot}{the oldest car company} in the world, but do you know that Peugeot built coffee grinders since the 1840s? In this \href{https://www.youtube.com/watch?v=biTUPDVP57Y}{Youtube video}, you can see detailed disassembly and assembly of a vintage Peugeot coffee grinder made in the 1930s. Your goal is to redesign it with modern components that are ready to be purchased or fabricated through class resources, and verify your design with CAD. \\
+\textit{Note: You are not required to actually build the grinder, but you could do that with minor adjustments if you were interested and you correctly adhered to the requirements below. }
+
+\subsection*{Instructions and Requirements}
+\textbf{Materials and Fabrication Rules.} Unless otherwise noted, your components should primarily be sourced from McMaster, or be basic components available in the Taylor Design Studio (TDS).
+At most three components need to be CADed yourself and fabricated in either the Rapid Prototyping Lab (RPL), or Manufacturing Learning Studio (MLS) with \underline{Red Apron}.
+You can machine your components from McMaster in TDS or MLS only to shorten shafts or for assembling purposes such as threading/tapping or milling hexagon heads; otherwise it is counted towards the three self-fabricated components maximum.
+You cannot weld/glue/tape anywhere.
+See the \href{https://canvas.cornell.edu/courses/85021/modules/items/3631312}{ODP Materials Guide on Canvas} and the \href{https://canvas.cornell.edu/enroll/WWE46G}{Red Apron Orientation} for details of what's available to you.
+
+\textbf{Initial Sketching.} Figure~\ref{fig:sketch} shows a sketch of the grinder's backbone, including a handle, two shafts, a pair of miter gears, a pair of conical burrs, and necessary boundary conditions.
+Without changing these functioning components and without adding too many details, make your own version and complete the sketch to provide support/constraints to the backbone, and also a container for coffee beans (if you don't also have a container for ground coffee, then you should make sure a small cup fits in the space below the grinder to receive ground coffee). 
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.75\textwidth]{sketch.pdf}
+  \caption{Sketch of the backbone of the coffee grinder.}
+  \label{fig:sketch}
+\end{figure}
+
+\textbf{Search \& Refine.} Search on McMaster for needed components, which must have downloadable CAD files provided.
+If the component is available in TDL or MLS, you can obtain CAD files from any online source.
+Make a list of components where you clearly record their descriptions, where they come from (e.g., McMaster code), where CAD files come from (e.g., CAD yourself), and what machining they need (e.g., drilling in TDL, threading in MLS). Then, recursively adjust your sketch according to your findings, go back to search, and update your component list. \\
+\textit{Note: The conical burrs set is a highly specialized component that requires a special geometry. This is the only material that you cannot get from Class Resources (CNCs in MLS are not available to Red Aprons). You are allowed to use \href{https://grabcad.com/library/conical-burrs-both-parts-1}{reverse-engineered CAD files on GrabCAD} in your design and they do not count toward the three self-fabricated components. The files are in Solidworks format, but you can open them in Fusion and save them as Fusion files.}
+
+\textbf{CAD Verification \& Refine.} Model the self-fabricated components, process downloaded CAD files if you have to machine the components, and assemble the coffee grinder.
+The goal is: When you rotate the handle, the gears rotate in a coupled manner, driving the burrs to rotate, and ground coffee freely falls down from the gap between the burrs.
+The CAD assembly is only valid when you could assemble it in reality, meaning that it follows constraints including but not limited to: 
+\begin{itemize}
+    \item There is no penetration between every two components
+    \item No component would fall off due to gravity
+    \item You are not allowed to weld/glue/tape
+    \item For simplification, you can use Rigid joints only for fastening (bolt, nut, threaded/tapped holes, etc.) between two matching surfaces.
+\end{itemize}
+\textbf{Tip:} See \href{https://www.youtube.com/watch?v=1jbkHboGHNo}{this video about motion links}, not only for the miter gears.
+Contact sets might help you out if you struggle with joints, but it's not requried.
+
+\section{Deliverables}
+Submit on Canvas your final sketch of the coffee grinder, the component list, and a screenshot of your coffee grinder assembly.
+On Fusion hub, move your assembly and all related files to your final folder \texttt{<CoffeeGrinder\_Final>}. 
+
+% Example points table rows:
+\PointsTableAuto{
+  \PointsRow{The CAD assembly has at least a handle, two shafts, miter gears, and conical burrs}{2}
+  \PointsRow{The CAD assembly has a container for coffee beans and another for ground coffee (otherwise a small cup of at least 40~mm high and in diameter should fit beneath the grinder)}{2}
+  \PointsRow{The CAD assembly is properly constrained and assembled, and can be operated as a coffee grinder, as described in the CAD Verification \& Refine section above}{8}
+  \PointsRow{All CAD files follow Good CAD Practices posted on Canvas}{3}
+  \PointsRow{The sketch clearly conveys design intent}{3}
+  \PointsRow{The sketch is consistent with the CAD assembly}{2}
+  \PointsRow{The component list clearly records descriptions, source, and machining needed}{3}
+  \PointsRow{The component list matches the components in the CAD assembly}{3}
+  \PointsRow{All components, except for the conical burr set, are available from the Class Resources}{4}
+}
+
+\end{document}

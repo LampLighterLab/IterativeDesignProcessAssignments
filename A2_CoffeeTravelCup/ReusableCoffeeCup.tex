@@ -1,0 +1,75 @@
+% handout_template.tex
+\documentclass[11pt]{article}
+\usepackage{mae2250-handout}
+
+% --- Handout metadata (edit per handout) ---
+\renewcommand{\HandoutType}{Assignment} % e.g., Assignment, Open Design Project
+\renewcommand{\HandoutNumber}{3} % e.g., 1, 2, ...
+\renewcommand{\HandoutTitle}{Parameter-Driven Design}
+\renewcommand{\DueDate}{Feb 23 @ 11:59PM}
+\renewcommand{\TeamType}{Individual} % e.g., INDIVIDUAL, DESIGN TEAM (4--6 students)
+% \renewcommand{\TotalPoints}{15}
+
+\begin{document}
+\MakeHandoutHeader
+
+% =========================
+% Edit content below
+% =========================
+
+\Section{Logistics}
+
+To ensure your deliverables are submitted correctly, and TAs are grading the correct version, you'll need to create a few specific folders in your fusion 2250 project.
+First, you'll create a \texttt{<CoffeeCup>} folder in your 2250 project folder.
+Then add two sub-folders: one called \texttt{<CoffeeCup\_Working>} and the other labelled \texttt{<CoffeeCup\_Final>}.
+As you might expect, you'll create and edit your parts in the working folder.
+This is your sandbox!
+You can make as many versions, mistakes, or edits as you want here (including accidental destruction and failed repairs).
+Your TAs won't grade or look at this folder.
+When you are confident that your files are ready to submit, move or copy them to the “Final” folder.
+Your TAs will only grade files in this folder – if you do not move them from Working to Final they will not be graded.
+This is a good habit to practice not only for this class, but for organizing versions of your files as they go into “Design Freeze” in practice.
+
+\section{Overview}
+The goal of this assignment is to learn and become familiar with parametric design.
+You client is a new up-and-coming café, and they want to commemorate their anniversary with a line of branded, re-usable cups, aesthetically themed around the classic disposable coffee cup.
+You will design a single parametric CAD model of a reusable coffee cup, and use it to then create different cup sizes, driven by a single parameter.
+\subsection*{Design Requirements}
+Your model must include both the coffee cup and a matching lid.
+The café primarily serves commuters and requires that all cups fit securely within a standard car cup holder.
+You may assume cup holder diameter for most cars is at least 3 inches.
+The café is considering three cup sizes: small, medium, and large, with target volumes of 8 oz, 12 oz, and 16 oz, respectively.
+These volumes are provided as reference values only and are not finalized in the eyes of the café team.
+Therefore, rather than creating separate CAD files for each size, you should design one model that can be resized to accommodate any volume by changing a single volume parameter.
+\subsection*{Other considerations}
+Your final submission model must be fully parametric, such that updating the volume parameter automatically adjusts the geometry of the cup and lid as needed.
+To achieve this, you are required to use the \texttt{Parameters} feature in Fusion.
+\par
+\textbf{Plan with a sketch}: before you start CAD, make a sketch of the cup, highlight the relevant dimensions, and use it to plan out which dimensions will be driving parameters, and how they will depend on each other.
+Color code them, and annotate your sketch with the equations you'll use.
+It should be clear from your sketch what parameter to change to get a desired effect.
+Use this process to plan out your CAD timeline.
+\par
+\textbf{Unit conversion}: in Fusion the parameters feature does not accept conflicting units even if the expression is correct.
+To tackle this you can divide by each unit in every expression. For example: $[ 2 * (3 \text{mm}) ]$ will not work, but $[ 2 * (3 \text{mm} / 1 \text{mm}) ]$will.
+\par
+\textbf{Good Practices}: make sure you are following the \texttt{Good CAD Practices} as posted under assignment 1 in Canvas.
+\section{Deliverables}
+TAs will inspect your design on Fusion Hub, and will test your parameter-driven design. In addition, submit a PDF with your drawn sketch clearly showing which parameters drive the design, and (typed up) the parameter names.
+% \begin{Deliverables}
+%   \item \textbf{CAD} of cup and lid in Fusion hub.
+%   \item \textbf{PDF} of your drawn sketch, and the equations used.
+% %   \item \textbf{Screenshot} of the master sketch, highlighting which parameter to change to drive the overall design.
+% \end{Deliverables}
+
+% Example points table rows:
+\PointsTableAuto{
+  \PointsRow{All CAD sketches, bodies, and functional parameters have a meaningful name}{3}
+  \PointsRow{All CAD sketches are fully constrained}{1}
+  \PointsRow{All parts are assigned a material, and non-driven dimensions are reasonable for that material}{2}
+  \PointsRow{The drawn sketch/equations clearly convey design intent and matches the CAD history}{4}
+  \PointsRow{Cup would fit in a standard car cup-holder}{1}
+  \PointsRow{Cup capacity can be changed with a single parameter without breaking any part}{4}
+}
+
+\end{document}

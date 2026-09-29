@@ -1,0 +1,202 @@
+% Editable transcription of MugRack.pdf.
+% The source title says Assignment 2; draft notes and placeholders are retained.
+\documentclass[11pt,letterpaper]{article}
+\usepackage{mae2250-handout}
+\usepackage[normalem]{ulem}
+
+% Match the source's wider text area while retaining the course typography.
+\geometry{left=0.65in,right=0.65in,top=1in,bottom=0.65in}
+\setlength{\headwidth}{\textwidth}
+\setlength{\parskip}{3pt plus 1pt}
+\setlist[itemize]{label=-,leftmargin=2em,itemsep=0pt,topsep=0pt,
+  parsep=0pt,partopsep=0pt}
+\newenvironment{AssignmentSteps}[1][]
+  {\begin{enumerate}[label=\arabic*.,leftmargin=2em,itemsep=0pt,
+    topsep=0pt,parsep=0pt,partopsep=0pt,#1]
+    \setlist[itemize,1]{leftmargin=0pt}}
+  {\end{enumerate}}
+\newcommand{\PartHeading}[1]{\par\addvspace{6pt}%
+  \noindent\textbf{\underline{#1}}\par\nopagebreak}
+
+\renewcommand{\HandoutNumber}{2}
+\renewcommand{\HandoutTitle}{Mug Rack}
+\renewcommand{\TeamType}{Group}
+\newcommand{\PartOneDueDate}{\{within 4 days of in lab part\}}
+\newcommand{\PartTwoDueDate}{\{two weeks after the first lab\}}
+
+% Adapt the course handout header to the source's two separate due dates.
+\renewcommand{\MakeHandoutHeader}{%
+  \fancyhead[L]{\small\CourseCode~--~\CourseTitle}%
+  \fancyhead[R]{\small\Semester}%
+  \begin{center}
+    {\Large\textbf{\HandoutType~\HandoutNumber: \HandoutTitle}}\par
+    \vspace{0.6em}
+  \end{center}
+  \hrule
+  \vspace{0.9em}
+  {\setlength{\parskip}{0pt}%
+    \textbf{Part 1 due date:} \PartOneDueDate\par
+    \textbf{Part 2 due date:} \PartTwoDueDate\par
+    \textbf{Type:} \TeamType\par}
+  \vspace{0.9em}
+  \hrule
+  \vspace{0.9em}
+}
+
+\begin{document}
+\MakeHandoutHeader
+
+For this assignment, you will be designing and building a rack to hold the mugs you made in assignment 1. Some
+examples are pictured below. You will have the following constraints:
+\begin{itemize}
+  \item You may only use laser-cut materials.
+  \item You will only be allowed to use the adhesives or fasteners already in the TDS.
+  \item The rack must hold at least one mug for each person on the team.
+  \item The rack will touch the ground (it will \emph{not} be hung from a wall).
+\end{itemize}
+
+% Original embedded images, with the first cropped to match the PDF's view.
+\begin{center}
+  \includegraphics[height=3in,trim=105bp 24bp 111bp 142bp,clip]{images/mug-rack-example-000.png}%
+  \hspace{0.12in}%
+  \includegraphics[height=3in]{images/mug-rack-example-001.png}
+\end{center}
+
+\PartHeading{PART 1: MODELLING}
+\begin{AssignmentSteps}
+  \item \underline{Set constraints (\textless5min)}
+    \begin{itemize}
+      \item Have one person on your team create an assembly called ``mug\_rack.''
+      \item Add 1 mug from each person's Assignment 1 to a group assembly.
+        \begin{itemize}
+          \item Use this step to ensure the mugs' dimensions fit assignment 1's specifications. If not, fix now!
+        \end{itemize}
+      \item Measure and record the largest diameter, height, and handle extrusion of the mugs you have chosen.
+      \item Measure and record the dimensions of a desk space in front of you. \{Since this will probably be huge, we
+        could also ask them to take measurements before lab.\} This will be the bounding box for your project.
+    \end{itemize}
+  \item \underline{Brainstorm and sketches. (\textasciitilde30min)}
+    \begin{itemize}
+      \item As a group, look at different commercially available mug racks online.
+      \item Make a sketch of your plan for the rack. Be sure to consider how your pieces will be joined together.
+      \item Make a free body diagram of the mug rack, assuming your mugs are adding weight to it.
+      \item Either on your original sketch or on a new one, demonstrate how the force flows in your design (mug to arm to
+        post to ground).
+    \end{itemize}
+\end{AssignmentSteps}
+
+\newpage
+\begin{AssignmentSteps}[start=3]
+  \item \underline{Parameterize. (30-60min)}
+\end{AssignmentSteps}
+\begin{itemize}
+  \item Have one person open the CAD assembly and navigate to MODIFY\(\rightarrow\)CHANGE PARAMETERS.
+  \item Click the ``plus'' on the top to create three new parameters: \texttt{cup\_D}, \texttt{cup\_H}, and \texttt{handle\_W} for the measurements you have already taken.
+  \item Add the derived parameter \texttt{support\_H} for the height of the vertical support, determined by the parameters you already have.
+  \item Continue adding parameters as needed. Note that every dimension you make must be driven by a parameter, and you need at least 3 derived parameters. Below is a list of parameters you might find useful:
+  \begin{itemize}
+    \item \texttt{arm\_D} --- arm diameter; must pass through \texttt{handle\_W} with clearance, but not be so thin it snaps
+    \item \texttt{arm\_L} --- arm length; must let the mugs sit without falling
+    \item \texttt{arm\_tilt} --- upward tilt angle of each arm so a mug slides toward the post instead of off the tip
+    \item \texttt{N\_arms} --- number of arms
+    \item \texttt{arm\_gap} --- vertical spacing if arms sit at different heights, so hanging mugs cannot touch each other
+    \item \texttt{post\_D} --- center post diameter
+    \item \texttt{base\_D} --- base diameter
+  \end{itemize}
+\end{itemize}
+\PartHeading{To be done on your own:}
+\begin{AssignmentSteps}[start=4]
+  \item \underline{CAD and assemble.}
+\end{AssignmentSteps}
+\begin{itemize}
+  \item CAD your assembly of the mug rack.
+  \begin{itemize}
+    \item You may notice you will need to create additional parameters. This is expected, so make sure that the rest of the team knows what other parameters exist.
+  \end{itemize}
+  \item Add your mugs from assignment 1 to the rack.
+  \item Before submitting, do a final check for cohesion and usability.
+\end{itemize}
+\textbf{Move your model to a folder called ``rack\_Final'' and submit a document with everyone's names, your sketches, your bounding box, and a table of your parameters to Canvas by \{Week 1 due date\}.}
+
+\medskip
+\PartHeading{PART 2: BUILDING AND ITERATING}
+\begin{AssignmentSteps}[start=5]
+  \item \underline{Laser cut parts.}
+\end{AssignmentSteps}
+\begin{itemize}
+  \item Have one person in your group save all parts as a dxf file and have the design laser cut in either the RPL or the TDS.
+  \begin{itemize}
+    \item Further instructions for laser cutting can be found here.
+    \item Note that both facilities work on limited hours. The more time spent on the model, the less time you will have to laser cut.
+  \end{itemize}
+  \item Bring all parts into the lab next week.
+\end{itemize}
+\PartHeading{To be done in lab:}
+\begin{AssignmentSteps}[start=6]
+  \item \underline{Assemble.}
+\end{AssignmentSteps}
+\begin{itemize}
+  \item Use your parts to build your mug rack in the lab.
+  \item \{If possible\} attempt to hang up your mugs.
+\end{itemize}
+\begin{AssignmentSteps}[start=7]
+  \item \underline{Review and Revise.}
+\end{AssignmentSteps}
+\begin{itemize}
+  \item Assess your assembly. Write down what went well and what unexpected challenges you had.
+  \item \{If time\} Revise your CAD and rebuild your mug rack by the beginning of your next lab section.
+  \begin{itemize}
+    \item Note: We anticipate that many of your parts are smaller than they are on the CAD. This is because the laser cutter has thickness, so it takes off some mass on the sides when it is cutting. We recommend that you measure the difference between your actual model and the CAD and create a new parameter,
+    \newpage
+    \texttt{laser\_allowance}. This will be much easier to edit if all of your dimensions are already parameterized!
+  \end{itemize}
+\end{itemize}
+\textbf{Move your revised CAD model into ``rack\_Final,'' and submit your written assessment to Canvas by \{Week 2 due date\}.}
+
+\medskip
+UP NEXT: adding rotation through bearings to your rack
+
+\newpage
+\begingroup
+\sffamily
+(Planning. Students wouldn't see this part)
+
+\PartHeading{Learning Objectives:}
+\begin{itemize}
+  \item Tolerancing
+  \item Fusion on a team
+  \item (maybe) parameterization
+  \item (maybe) Center of gravity and tipping
+  \begin{itemize}
+    \item Might be difficult to do effectively when only one person out of the group can be on the CAD at a time
+  \end{itemize}
+\end{itemize}
+\begin{AssignmentSteps}
+  \item Constraints (\textless5 min)
+  \item Brainstorming and sketching (\textasciitilde30min)
+  \item Parameterization (\textasciitilde30min-1hr)
+\end{AssignmentSteps}
+All before done within lab section
+\begin{AssignmentSteps}[start=4]
+  \item CAD
+  \item[\sout{5.}] \sout{(maybe) CG test (\textasciitilde30min)}
+\end{AssignmentSteps}
+All done within 4 days of assignment given
+\begin{AssignmentSteps}[start=6]
+  \item Build (lab section 2)
+  \item ReCAD, rebuild
+  \begin{enumerate}[label=\alph*.]
+    \item If not possible, discussion about laser cutting
+  \end{enumerate}
+\end{AssignmentSteps}
+
+\medskip
+Assuming assignment 1 already taught basic cut, extrude, assembly design, etc; and all the mugs have weight and volume requirements
+
+Assuming it is possible for students to work on other student's projects (this was not possible last semester)
+
+\medskip
+Next step: making the rack rotate
+\par
+\endgroup
+\end{document}

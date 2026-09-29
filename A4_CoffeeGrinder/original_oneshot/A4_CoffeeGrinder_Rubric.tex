@@ -1,0 +1,101 @@
+% handout_template.tex
+\documentclass[11pt]{article}
+\usepackage{mae2250-handout}
+\usepackage{hyperref}
+% \usepackage[colorlinks, urlcolor=blue, linkcolor=red, citecolor=green]{hyperref}
+
+% --- Handout metadata (edit per handout) ---
+\renewcommand{\HandoutType}{Rubric of Assignment} % e.g., Assignment, Open Design Project
+\renewcommand{\HandoutNumber}{4} % e.g., 1, 2, ...
+\renewcommand{\HandoutTitle}{Coffee Grinder}
+\renewcommand{\DueDate}{Mar 15 @ 11:59PM}
+\renewcommand{\TeamType}{Individual} % e.g., INDIVIDUAL, DESIGN TEAM (4--6 students)
+% \renewcommand{\TotalPoints}{15}
+
+\begin{document}
+\MakeHandoutHeader
+
+% =========================
+% Edit content below
+% =========================
+
+\textbf{(1 pt) The CAD assembly has at least a handle, two shafts, miter gears, and conical burrs}
+
+Self-explanatory.
+
+\textbf{(1 pt) The CAD assembly has a container for coffee beans and another for ground coffee (otherwise a small cup should fit beneath the grinder)}
+
+Self-explanatory. If there is no container for ground coffee, then there should be enough space below the grinder for a small cup (at least 40~mm high and 40~mm in diameter) to fit in. 
+
+\textbf{(8 pts) The CAD assembly is properly constrained and assembled, and can be operated as a coffee grinder, as described in the CAD Verification \& Refine section above}
+
+\begin{itemize}
+
+\item \textbf{Award 1 pt} if the handle is \textit{reasonably connected}
+\footnote[1]{The \textit{reasonably connected} phrase means that the assembly can be achieved \textit{in reality} without welding/gluing/taping. For example, a end-threaded shaft or a screw can be fastened with a nut or a handle with a threaded hole at the same diameter, but a round shaft cannot have a rigid joint with a hexagonal hole or a hole at a different diameter, and a round shaft cannot have a rigid joint with a flat surface. } 
+with the horizontal shaft: The handle has a hole at the same diameter as the end of the horizontal shaft, and there is a Rigid joint (or another joint with a similar effect) between them. 
+
+\item \textbf{2 bonus pts} if the horizontal shaft is \textit{reasonably connected} with the miter gear, and the vertical shaft is \textit{reasonably connected} with the other miter gear. One possible and desired solution is that both the gears and the shafts are keyed, and keys are inserted in between to couple them. A rigid joint between the shaft and the gear does not meet this requirement. Bonus pts make up for missing points anywhere in this assignment. 
+
+\item \textbf{Award 1 pt} if the horizontal shaft is supported.
+
+\item \textbf{Award 1 pt} if the vertical shaft is supported vertically, possibly with a nut or a threaded cap fastened at the top and a supporting structure right beneath the nut or cap. 
+
+\item \textbf{Award 1 pt} if the miter gear on the vertical shaft is supported vertically by a supporting structure right beneath it. 
+
+\item \textbf{Award 1 pt} if the miter gears are properly meshed, possibly by a motion link. 
+
+\item \textbf{Award 1 pt} if the conical burrs are \textit{reasonably connected} with the vertical shaft. Possible solution 1: the shaft is milled to have a hexagonal end that can fit the hexagonal hole in the conical burr. Possible solution 2: the vertical shaft is connected with a hexagonal shaft by a screw. 
+
+\item \textbf{Award 1 pt} if the outer burr is supported by a structure beneath it.
+
+\item \textbf{Award 1 pt} if the gap between the outer and inner burrs are not block to allow ground coffee to fall down freely.
+
+
+\end{itemize}
+
+\newpage
+
+\textbf{(1 pt) All CAD files follow Good CAD Practices posted on Canvas}
+
+Main things to check: (1) They use SI units; (2) They name all components and sketches with descriptive names. 
+
+\textbf{(3 pts) The sketch clearly conveys design intent}
+
+\begin{itemize}
+\item \textbf{Award 1 pt} if the sketch is neat and clear enough to understand.
+\item \textbf{Award 1 pt} if the sketch shows how the backbone is supported.
+\item \textbf{Award 1 pt} if you can understand movement of the components when operating the handle.
+
+\end{itemize}
+
+\textbf{(2 pts) The sketch is consistent with the CAD assembly}
+\begin{itemize}
+  \item \textbf{Award 1 pt} if the sketch contains major components in the CAD assembly, including all components in the backbone, supporting structures, and containers. 
+  \item \textbf{Award 1 pt} if the sketch is consistent with the CAD assembly in terms of the relative positions of components.
+\end{itemize}
+
+\textbf{(3 pts) The component list clearly records descriptions, source, and machining needed}
+
+\begin{itemize}
+  \item \textbf{Award 1 pt} if descriptions are clear enough to understand what the component is.
+  \item \textbf{Award 1 pt} if purchasing and CAD source information is provided for each component.
+  \item \textbf{Award 1 pt} if machining is clearly described.
+\end{itemize}
+
+\textbf{(3 pts) The component list matches the components in the CAD assembly}
+
+\begin{itemize}
+  \item \textbf{Award 2 pts} if all components in the CAD assembly are included in the component list.
+  \item \textbf{Award 1 pt} if all components in the component list are included in the CAD assembly.
+\end{itemize}
+
+\textbf{(3 pts) All components, except for the conical burr set, are available from the Class Resources} 
+
+\begin{itemize}
+  \item \textbf{Dock 1 pt} for each component that is not available in RPL, MLS with Red Apron, TDL, or McMaster, except for the conical burr set. 
+  \item \textbf{Dock 1 pt} for each machining that is not available in MLS with Red Apron or in TDL. 
+  \item \textbf{Dock 2 pts} if they used more than 3 self-fabricated components. 
+\end{itemize}
+
+\end{document}

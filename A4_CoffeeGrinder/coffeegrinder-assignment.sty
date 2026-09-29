@@ -1,0 +1,40 @@
+% Shared layout for the four Coffee Grinder assignment handouts.
+% The course stylesheet is an unmodified copy from Utility Card/.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{coffeegrinder-assignment}[2026/09/29 Coffee Grinder assignment layout]
+\RequirePackage{mae2250-handout}
+\RequirePackage{amssymb}
+
+\renewcommand{\HandoutNumber}{4}
+\renewcommand{\HandoutTitle}{Coffee Grinder}
+\newcommand{\PartTitle}{}
+
+% Keep the reference style's title, metadata rules, course header, and footer.
+% Add the part subtitle to the existing header without editing the base style.
+\newcommand{\MakeAssignmentHeader}{%
+  \begingroup
+    \renewcommand{\HandoutTitle}{Coffee Grinder\par
+      \vspace{0.3em}{\large\normalfont\PartTitle}}%
+    \MakeHandoutHeader
+  \endgroup
+  \fancyhead[L]{\small\CourseCode~--~\CourseTitle}%
+  \fancyhead[R]{\small\Semester}%
+}
+
+% Compact spacing retains the original assignment/checklist page divisions.
+\setlength{\parskip}{5pt plus 1pt}
+\setlist[itemize]{label=-,leftmargin=2em,itemsep=0pt,topsep=0pt,
+  parsep=0pt,partopsep=0pt}
+\newenvironment{AssignmentSteps}
+  {\begin{enumerate}[label=\arabic*.,leftmargin=2em,itemsep=0pt,
+    topsep=0pt,parsep=0pt,partopsep=0pt]
+    \setlist[itemize,1]{leftmargin=0pt}}
+  {\end{enumerate}}
+\newenvironment{Checklist}
+  {\begin{itemize}[label=\(\square\),leftmargin=2em,itemsep=0.15em,
+    topsep=0pt,parsep=0pt,partopsep=0pt]}
+  {\end{itemize}}
+\newcommand{\PartHeading}[1]{\par\addvspace{5pt}%
+  \noindent\textbf{\underline{#1}}\par\nopagebreak}
+
+\endinput
