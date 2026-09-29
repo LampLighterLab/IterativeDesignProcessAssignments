@@ -1,4 +1,8 @@
-# CAD for iterative design
+# CAD for the iterative design process
+
+These files are also available [here](https://tinyurl.com/IDPAssignments), along
+with additional binaries, PDFs, notes, etc. that aren't committed (to maintain a
+clean repository).
 
 ## Context
 
