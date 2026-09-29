@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+set -euo pipefail
+export GIT_LITERAL_PATHSPECS=1
+
+cd "$(git rev-parse --show-toplevel)"
+
+files=()
+while IFS= read -r -d '' path; do
+  case "$path" in
+    *.[mM][dD]|*.[mM][aA][rR][kK][dD][oO][wW][nN]) files+=("./$path") ;;
+  esac
+done < <(git diff --cached --name-only --diff-filter=ACMR -z)
+
+if [ "${#files[@]}" -eq 0 ]; then
+  exit 0
+fi
+
+# Check every file before formatting, so unstaged edits are never staged for you.
+for file in "${files[@]}"; do
+  if [ ! -f "$file" ] || [ -L "$file" ]; then
+    printf 'Prettier: expected a regular Markdown file: %s\n' "$file" >&2
+    exit 1
+  fi
+  if ! git diff --quiet -- "$file"; then
+    printf 'Prettier: %s has unstaged changes. Stage or stash them, then retry the commit.\n' "$file" >&2
+    exit 1
+  fi
+done
+
+if ! command -v npx >/dev/null 2>&1; then
+  printf 'Prettier: Node.js and npx must be available on PATH.\n' >&2
+  exit 1
+fi
+
+npx --yes prettier@3.6.2 --write --parser markdown --prose-wrap always "${files[@]}"
+git add -- "${files[@]}"
