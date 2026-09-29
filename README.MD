@@ -57,14 +57,14 @@ semester 2027.
 We have done _some_ testing over the summer with the students executing (some)
 of the assignments.
 
-### Assignment List
+## Assignment List
 
-#### Coffee Mugs
+### Coffee Mugs
 
 **ILO**: basic CAD This is an existing assignment: CAD a coffee mug, using
 different features (e.g. extrude, revolve, etc.)
 
-#### Coffee Travel Thermos
+### Coffee Travel Thermos
 
 **ILO**: Parameter-driven design This is an existing assignment: CAD a travel
 thermos with lid, that is parameterized so you can change 1 parameter (cup
@@ -80,7 +80,7 @@ credit card-sized multi-tool.
 - Work on CAD in a team-setting
 - Use top-down (aka master-modeling) design workflow
 
-#### Mug Rack
+### Mug Rack
 
 Design and build a rack for your mugs, using only fabrication techniques
 available to you in the Design Studio (hand-tools, laser-cutter, bandsaw,
@@ -151,3 +151,10 @@ pdflatex MugRack.tex
 # or
 xelatex MugRack.tex
 ```
+
+## Markdown formatting
+
+Run `git config core.hooksPath .githooks` once per clone to enable the
+pre-commit hook. It formats staged Markdown with Prettier (requires Node.js/npm)
+and stops if a Markdown file has unstaged edits. Prettier 3.6.2 is downloaded on
+first use if it is not already cached.
